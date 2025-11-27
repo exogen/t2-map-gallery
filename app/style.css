@@ -2,3 +2,59 @@ body {
   background: #000;
   color: #eee;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-family: var(--font-russo-one), sans-serif;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ImageList {
+  display: flex;
+  align-items: top;
+}
+
+.ImageItem {
+  flex: 1 1 auto;
+}
+
+.PreviewImage {
+  width: 100%;
+  height: auto;
+}
+
+.MapName {
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(255, 183, 0, 0.85);
+  margin: 20px 0 10px 0;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.TextInput {
+  font-size: 18px;
+  background: rgba(25, 98, 73, 0.2);
+  color: rgb(183, 255, 185);
+  border: 1px solid rgb(58, 255, 222);
+  border-radius: 10px;
+  margin: 0;
+  padding: 10px;
+}
