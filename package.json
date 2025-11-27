@@ -1,0 +1,46 @@
+{
+  "name": "t2-map-gallery",
+  "version": "1.0.0",
+  "description": "Tribes 2 map gallery",
+  "keywords": [
+    "tribes",
+    "tribes 2",
+    "t2",
+    "mapping",
+    "games",
+    "gaming",
+    "torque"
+  ],
+  "author": "Brian Beck <exogen@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exogen/t2-map-gallery.git"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/exogen/t2-map-gallery/issues"
+  },
+  "homepage": "https://github.com/exogen/t2-map-gallery#readme",
+  "scripts": {
+    "build": "next build && touch docs/.nojekyll",
+    "clean": "rimraf .next",
+    "deploy": "npm run build && git add -f docs && git commit -m \"Deploy\" && git push",
+    "postbuild": "git checkout -- public/base",
+    "prebuild": "npm run clean && git checkout -- docs && rimraf public/images && mv docs/images public/",
+    "start": "next dev --turbopack"
+  },
+  "dependencies": {
+    "match-sorter": "^8.2.0",
+    "next": "^16.0.5",
+    "puppeteer": "^24.31.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "rimraf": "^6.1.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
