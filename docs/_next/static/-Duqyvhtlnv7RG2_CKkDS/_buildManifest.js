@@ -3,8 +3,8 @@ self.__BUILD_MANIFEST = {
     "afterFiles": [],
     "beforeFiles": [
       {
-        "source": "/t2-map-gallery//_next/:path+",
-        "destination": "/t2-map-gallery/_next/:path+"
+        "source": "/t2-maps//_next/:path+",
+        "destination": "/t2-maps/_next/:path+"
       }
     ],
     "fallback": []

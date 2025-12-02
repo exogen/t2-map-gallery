@@ -5,7 +5,7 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import untypedMissionsJson from "./missions.json";
 
-const BASE_URL = "/t2-map-gallery/";
+const BASE_URL = "/t2-maps/";
 
 type Mission = {
   missionName: string;

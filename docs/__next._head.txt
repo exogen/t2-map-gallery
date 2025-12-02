@@ -1,8 +1,8 @@
 1:"$Sreact.fragment"
-2:I[97367,["/t2-map-gallery/_next/static/chunks/c01280eff21a16b3.js"],"ViewportBoundary"]
-4:I[97367,["/t2-map-gallery/_next/static/chunks/c01280eff21a16b3.js"],"MetadataBoundary"]
+2:I[97367,["/t2-maps/_next/static/chunks/c01280eff21a16b3.js"],"ViewportBoundary"]
+4:I[97367,["/t2-maps/_next/static/chunks/c01280eff21a16b3.js"],"MetadataBoundary"]
 5:"$Sreact.suspense"
-7:I[27201,["/t2-map-gallery/_next/static/chunks/c01280eff21a16b3.js"],"IconMark"]
-0:{"buildId":"8vqkfdB05Wy90a05t0m7H","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":"$@3"}],["$","div",null,{"hidden":true,"children":["$","$L4",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$@6"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}
+7:I[27201,["/t2-maps/_next/static/chunks/c01280eff21a16b3.js"],"IconMark"]
+0:{"buildId":"-Duqyvhtlnv7RG2_CKkDS","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":"$@3"}],["$","div",null,{"hidden":true,"children":["$","$L4",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$@6"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}
 3:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-6:[["$","title","0",{"children":"Tribes 2 Map Gallery"}],["$","meta","1",{"name":"description","content":"Tribes 2 forever."}],["$","link","2",{"rel":"icon","href":"/t2-map-gallery/icon.png?icon.2911bba1.png","sizes":"108x128","type":"image/png"}],["$","$L7","3",{}]]
+6:[["$","title","0",{"children":"Tribes 2 Map Gallery"}],["$","meta","1",{"name":"description","content":"Tribes 2 forever."}],["$","link","2",{"rel":"icon","href":"/t2-maps/icon.png?icon.2911bba1.png","sizes":"108x128","type":"image/png"}],["$","$L7","3",{}]]

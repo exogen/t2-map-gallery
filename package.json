@@ -1,5 +1,5 @@
 {
-  "name": "t2-map-gallery",
+  "name": "t2-maps",
   "version": "1.0.0",
   "description": "Tribes 2 map gallery",
   "keywords": [
@@ -15,13 +15,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/exogen/t2-map-gallery.git"
+    "url": "git+https://github.com/exogen/t2-maps.git"
   },
   "type": "module",
   "bugs": {
-    "url": "https://github.com/exogen/t2-map-gallery/issues"
+    "url": "https://github.com/exogen/t2-maps/issues"
   },
-  "homepage": "https://github.com/exogen/t2-map-gallery#readme",
+  "homepage": "https://github.com/exogen/t2-maps#readme",
   "scripts": {
     "build": "next build && touch docs/.nojekyll",
     "clean": "rimraf .next",
