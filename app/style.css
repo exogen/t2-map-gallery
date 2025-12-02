@@ -26,7 +26,6 @@ body {
     ),
     var(--color-bg-deep);
   background-size: 50px 50px, 50px 50px, 100% 100%, 100% 100%;
-  background-attachment: fixed;
   color: #e0e0e0;
   min-height: 100vh;
 }
@@ -69,9 +68,7 @@ li {
 header {
   position: sticky;
   top: 0;
-  background: var(--color-bg-panel);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0, 15, 20, 0.97);
   z-index: 100;
   border-bottom: 1px solid var(--color-cyan-dim);
   box-shadow: 0 1px 0 rgba(0, 240, 255, 0.3), 0 4px 30px rgba(0, 0, 0, 0.8);
@@ -249,13 +246,11 @@ form {
   max-width: 400px;
   max-height: 300px;
   display: block;
-  transition: filter 0.4s ease, transform 0.4s ease;
-  filter: saturate(0.9);
+  transition: transform 0.4s ease;
 }
 
 .ImageLightboxTrigger:hover .PreviewImage,
 .ImageLightboxTrigger:focus-visible .PreviewImage {
-  filter: saturate(1.1) brightness(1.1);
   transform: scale(1.02);
 }
 
