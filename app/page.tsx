@@ -125,7 +125,7 @@ export default function GalleryPage() {
           <input
             name="filter"
             type="search"
-            placeholder={`▸ Search ${missionList.length.toLocaleString()} maps…`}
+            placeholder={`▸ Search ${allMissions.length.toLocaleString()} maps…`}
             className="TextInput"
             autoFocus
             value={filter}

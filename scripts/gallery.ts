@@ -11,9 +11,8 @@ const browser = await puppeteer.launch({ headless: true });
 const page = await browser.newPage();
 await page.setViewport({ width: 800, height: 600 });
 
-// const origin = "https://exogen.github.io";
-const origin = "http://localhost:3000";
-const baseUrl = `${origin}/t2-mapper/`;
+const origin = process.env.MAPPER_ORIGIN || "https://exogen.github.io";
+const baseUrl = process.env.MAPPER_URL || `${origin}/t2-mapper/`;
 
 await page.evaluateOnNewDocument(() => {
   localStorage.setItem(
