@@ -9,7 +9,7 @@ const missions = {};
 
 const browser = await puppeteer.launch({ headless: true });
 const page = await browser.newPage();
-await page.setViewport({ width: 800, height: 600 });
+await page.setViewport({ width: 1280, height: 720 });
 
 const origin = process.env.MAPPER_ORIGIN || "https://exogen.github.io";
 const baseUrl = process.env.MAPPER_URL || `${origin}/t2-mapper/`;
@@ -26,20 +26,16 @@ await page.evaluateOnNewDocument(() => {
   );
 });
 await page.goto(baseUrl, { waitUntil: "load" });
-await page.waitForNetworkIdle({ idleTime: 500 });
+await page.waitForNetworkIdle({ idleTime: 3000 });
 
 const outputType = "webp";
 
 const mapViewer = await page.waitForSelector("canvas");
 await sleep(100);
 
-// Extract missions from the select element
-const missionOptions = await page.$$eval("#missionList option", (options) =>
-  options.map((opt) => ({
-    missionName: opt.value,
-    displayName: opt.textContent,
-  }))
-);
+// Close the popover by pressing Escape
+await page.keyboard.press("Escape");
+await sleep(100);
 
 const SCREENSHOT_COUNT = 5;
 const CAMERA_KEYS = ["1", "2", "3", "4", "5"] as const;
@@ -49,7 +45,17 @@ await page.$eval("#controls", (el: HTMLElement) => {
   el.style.visibility = "hidden";
 });
 
-for (const { missionName, displayName } of missionOptions) {
+// Get mission names from the global getMissionList() function
+const missionNames: string[] = await page.evaluate(() =>
+  (window as any).getMissionList()
+);
+
+for (const missionName of missionNames) {
+  // Get mission info from the global getMissionInfo() function
+  const { displayName } = await page.evaluate(
+    (name) => (window as any).getMissionInfo(name),
+    missionName
+  );
   // Count existing screenshots
   let existingCount = 0;
   for (let j = 1; j <= SCREENSHOT_COUNT; j++) {
@@ -73,8 +79,13 @@ for (const { missionName, displayName } of missionOptions) {
   }
 
   console.log(`Selecting ${missionName}…`);
-  await page.select("#missionList", missionName);
-  await page.waitForNetworkIdle({ idleTime: 500 });
+
+  // Use the global setMissionName function to select the mission
+  await page.evaluate(
+    (name) => (window as any).setMissionName(name),
+    missionName
+  );
+  await page.waitForNetworkIdle({ idleTime: 1000 });
 
   // Currently, the only way to really know if there are enough cameras to
   // select is to see if the image data in the <canvas> actually changed after
